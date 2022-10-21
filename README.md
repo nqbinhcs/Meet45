@@ -5,6 +5,10 @@
 - `docs`: Software development document
 
 ## Reference
+
+### Figma
+- https://www.figma.com/file/rbVYGlbqasa9tLXoWSubJn/Koch%C3%A9?node-id=53%3A2
+
 ### Document
 - [CNTN19](https://github.com/duytienkh/se-project)
 - https://www.mindbowser.com/guide-to-build-a-video-conferencing-app-like-zoom/
