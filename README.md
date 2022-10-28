@@ -6,6 +6,10 @@
 
 ## Reference
 
+### Usecase & diagram
+- http://repository.sustech.edu/bitstream/handle/123456789/21304/VIDEO%20CONFERENCE%20SYSTEMUSING%20WEBRTC.pdf?sequence=1
+
+
 ### Figma
 - https://www.figma.com/file/rbVYGlbqasa9tLXoWSubJn/Koch%C3%A9?node-id=53%3A2
 
