@@ -16,6 +16,8 @@
 ### Document
 - [CNTN19](https://github.com/duytienkh/se-project)
 - https://www.mindbowser.com/guide-to-build-a-video-conferencing-app-like-zoom/
+
 ### Code
+- https://www.cometchat.com/tutorials/zoom-clone-app
 - https://www.youtube.com/watch?v=ZVznzY7EjuY
 - https://github.com/CleverProgrammers/nodejs-zoom-clone
