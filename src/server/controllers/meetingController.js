@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 const Meeting = require("../models/meetingModel");
 
 // @desc    Create a new meeting
-// @route   POST /api/meetings 
+// @route   POST /api/meetings
 // @access  Public
 const createMeeting = asyncHandler(async (req, res) => {
   const { title, uid, creator } = req.body;
@@ -37,7 +37,7 @@ const createMeeting = asyncHandler(async (req, res) => {
       creator: meeting.creator,
     });
   } else {
-    res.status(400);
+    res.status(404);
     throw new Error("Invalid meeting id");
   }
 });
@@ -46,22 +46,41 @@ const createMeeting = asyncHandler(async (req, res) => {
 // @route   GET /api/meetings/:id
 // @access  Public
 const getMeeting = asyncHandler(async (req, res) => {
-
   const id = req.params.id;
 
   const meetings = await Meeting.find({ creator: id }, function (err, docs) {
     if (err) {
-       res.status(400);
-       throw new Error(err);
+      res.status(400);
+      throw new Error(err);
     } else {
-       res.status(201).jsonp(docs);
+      res.status(201).jsonp(docs);
+    }
+  });
+});
+
+// @desc    Get meeting by uid (or check meeting exits in database)
+// @route   GET /api/meetings/:id/get
+// @access  Public
+const getMeetingById = asyncHandler(async (req, res) => {
+  const id = req.params.id;
+
+  const meetings = await Meeting.findOne({ uid: id }, function (err, docs) {
+    if (err) {
+      res.status(400);
+      throw new Error(err);
+    } else {
+      res.status(201).jsonp(docs);
     }
   });
 
+  if (!meetings) {
+    res.status(404);
+    throw new Error("Invalid meeting id");
+  }
 });
-
 
 module.exports = {
   createMeeting,
-  getMeeting
+  getMeeting,
+  getMeetingById,
 };
