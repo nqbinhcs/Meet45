@@ -46,36 +46,18 @@ const createMeeting = asyncHandler(async (req, res) => {
 // @route   GET /api/meetings/:id
 // @access  Public
 const getMeeting = asyncHandler(async (req, res) => {
-//   const { email, password } = req.body;
-
-//   // Check for user email
-//   const user = await User.findOne({ email });
-
-//   if (user && (await bcrypt.compare(password, user.password))) {
-//     res.json({
-//       _id: user.id,
-//       name: user.name,
-//       email: user.email,
-//       token: generateToken(user._id),
-//     });
-//   } else {
-//     res.status(400);
-//     throw new Error("Invalid credentials");
-//   }
 
   const id = req.params.id;
 
-  const meetings = await Meeting.find({creator:id})
+  const meetings = await Meeting.find({ creator: id }, function (err, docs) {
+    if (err) {
+       res.status(400);
+       throw new Error(err);
+    } else {
+       res.status(201).jsonp(docs);
+    }
+  });
 
-  if (meeting){
-      res.status(201).json({
-        'message' : 'success'
-      });
-  }
-  else{
-      res.status(400);
-      throw new Error("Invalid credentials");
-  }
 });
 
 
