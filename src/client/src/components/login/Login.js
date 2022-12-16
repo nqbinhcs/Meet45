@@ -39,8 +39,8 @@ const Login = (props) => {
   };
 
   const signin = async (email, password) => {
-    const url = 'http://localhost:8080/login';
-    return await axios.post(url, { email, password });
+    const url = "http://localhost:8000/api/users/login";
+    return await axios.post(url, { email: email, password: password });
   }
 
   const login = async () => {
@@ -49,7 +49,7 @@ const Login = (props) => {
       try {
         setIsLoading(true);
         const authenticatedUser = await signin(email, password);
-        const cometChatAccount = await loginCometChat({ id: authenticatedUser.data.id });
+        const cometChatAccount = await loginCometChat({ id: authenticatedUser.data.uid });
         if (cometChatAccount) {
           localStorage.setItem('auth', JSON.stringify(authenticatedUser.data));
           setUser(authenticatedUser.data);

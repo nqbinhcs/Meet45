@@ -25,7 +25,7 @@ const Home = () => {
   const loadMeetings = async () => {
     if (user) {
       setIsLoading(true);
-      const url = `http://localhost:8080/meetings/${user.id}`;
+      const url = `http://localhost:8000/api/meetings/${user.uid}`;
       const response = await axios.get(url);
       const meetings = response.data;
       setMeetings(() => meetings);
@@ -54,9 +54,9 @@ const Home = () => {
         <div className="main__list">
           <h3>Your Created Meetings</h3>
           {meetings && meetings.map(meeting => (
-            <div className="main__list-item" key={meeting.id}>
-              <h3>{meeting.meeting_title}</h3>
-              <p className="main__meeting-id">Meeting ID: {meeting.meeting_uid}</p>
+            <div className="main__list-item" key={meeting._id}>
+              <h3>{meeting.title}</h3>
+              <p className="main__meeting-id">Meeting ID: {meeting.uid}</p>
               <button className="main__meeting-start" onClick={goMeeting(meeting)}>Start</button>
             </div>
           ))}

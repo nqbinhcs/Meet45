@@ -15,8 +15,7 @@ var meetingSchema = mongoose.Schema({
     },
 
     creator: { 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'User'
+        type: String
     }
 
 

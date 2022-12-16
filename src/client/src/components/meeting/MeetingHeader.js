@@ -20,7 +20,7 @@ function MeetingHeader() {
         </svg>
         <img  style={{ width: 30, height: 30 }} src={mainLogo}  />
 
-        <span className="header__app-name" >{meeting?.meeting_title}</span>
+        <span className="header__app-name" >{meeting?.title}</span>
       </div>
     </div>
   );

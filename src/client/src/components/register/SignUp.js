@@ -1,7 +1,7 @@
 import { useRef, useContext } from "react";
 import validator from "validator";
 import { v4 as uuidv4 } from "uuid";
-import axios from 'axios';
+import axios from "axios";
 import Context from "../../context";
 
 function SignUp(props) {
@@ -20,7 +20,7 @@ function SignUp(props) {
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
     return { fullname, email, password, confirmPassword };
-  }
+  };
 
   const isSignupValid = ({ fullname, email, password, confirmPassword }) => {
     if (validator.isEmpty(fullname)) {
@@ -31,8 +31,13 @@ function SignUp(props) {
       alert("Please input your email");
       return false;
     }
-    if (validator.isEmpty(password) || !validator.isLength(password, { min: 6 })) {
-      alert("Please input your password. You password must have at least 6 characters");
+    if (
+      validator.isEmpty(password) ||
+      !validator.isLength(password, { min: 6 })
+    ) {
+      alert(
+        "Please input your password. You password must have at least 6 characters"
+      );
       return false;
     }
     if (validator.isEmpty(confirmPassword)) {
@@ -47,48 +52,62 @@ function SignUp(props) {
   };
 
   const createUser = async ({ id, email, password, fullname, avatar }) => {
-    const url = 'http://localhost:8080/users/create';
-    return await axios.post(url, { id, email, password, fullname, avatar });
+    const url = "http://localhost:8000/api/users";
+
+    return await axios.post(url, {uid:id,  name: fullname, email: email, password: password, avatar: avatar});
+
   };
 
   const createCometChatAccount = async ({ id, fullname, avatar }) => {
     const authKey = `${process.env.REACT_APP_COMETCHAT_AUTH_KEY}`;
-    console.log(id)
-
     const user = new cometChat.User(id);
-    console.log(user.id)
     user.setName(fullname);
     user.setAvatar(avatar);
     return await cometChat.createUser(user, authKey);
   };
 
   const generateAvatar = () => {
-    const avatars= [
-      'https://data-us.cometchat.io/assets/images/avatars/captainamerica.png',
-      'https://data-us.cometchat.io/assets/images/avatars/cyclops.png',
-      'https://data-us.cometchat.io/assets/images/avatars/ironman.png',
-      'https://data-us.cometchat.io/assets/images/avatars/spiderman.png',
-      'https://data-us.cometchat.io/assets/images/avatars/wolverine.png'
+    const avatars = [
+      "https://data-us.cometchat.io/assets/images/avatars/captainamerica.png",
+      "https://data-us.cometchat.io/assets/images/avatars/cyclops.png",
+      "https://data-us.cometchat.io/assets/images/avatars/ironman.png",
+      "https://data-us.cometchat.io/assets/images/avatars/spiderman.png",
+      "https://data-us.cometchat.io/assets/images/avatars/wolverine.png",
     ];
     const avatarPosition = Math.floor(Math.random() * avatars.length);
     return avatars[avatarPosition];
-  }
+  };
 
   const signup = async () => {
-
     const { fullname, email, password, confirmPassword } = getInputs();
     if (isSignupValid({ fullname, email, password, confirmPassword })) {
-
       setIsLoading(true);
       const avatar = generateAvatar();
       const id = uuidv4();
-      const response = await createUser({ id, email, password, fullname, avatar });
+
+      const response = await createUser({
+        id,
+        email,
+        password,
+        fullname,
+        avatar,
+      });
       if (response && response.data.message) {
         alert(response.data.message);
       } else {
-        const createdAccount = await createCometChatAccount({ id, fullname, avatar });
+        const createdAccount = await createCometChatAccount({
+          id,
+          fullname,
+          avatar,
+        });
+
+
+        console.log("CREATE COMECHAT", createdAccount)
+
         if (createdAccount) {
-          alert(`${email} was created successfully! Please sign in with your created account`);
+          alert(
+            `${email} was created successfully! Please sign in with your created account`
+          );
         }
       }
       toggleModal(false);

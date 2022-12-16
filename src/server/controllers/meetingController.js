@@ -24,9 +24,9 @@ const createMeeting = asyncHandler(async (req, res) => {
 
   // Create meeting
   const meeting = await Meeting.create({
-    title,
-    uid,
-    creator,
+    title: title,
+    uid: uid,
+    creator: creator,
   });
 
   if (meeting) {
@@ -46,16 +46,16 @@ const createMeeting = asyncHandler(async (req, res) => {
 // @route   GET /api/meetings/:id
 // @access  Public
 const getMeeting = asyncHandler(async (req, res) => {
-  const id = req.params.id;
+  const uid = req.params.id;
 
-  const meetings = await Meeting.find({ creator: id }, function (err, docs) {
-    if (err) {
-      res.status(400);
-      throw new Error(err);
-    } else {
-      res.status(201).jsonp(docs);
-    }
-  });
+  const meeting = await Meeting.find({ creator: uid });
+
+  if (meeting) {
+    res.status(200).json(meeting);
+  } else {
+    res.status(400);
+    throw new Error("Invalid User id");
+  }
 });
 
 // @desc    Get meeting by uid (or check meeting exits in database)
@@ -64,18 +64,13 @@ const getMeeting = asyncHandler(async (req, res) => {
 const getMeetingById = asyncHandler(async (req, res) => {
   const id = req.params.id;
 
-  const meetings = await Meeting.findOne({ uid: id }, function (err, docs) {
-    if (err) {
-      res.status(400);
-      throw new Error(err);
-    } else {
-      res.status(201).jsonp(docs);
-    }
-  });
+  const meeting = await Meeting.findOne({ uid: id });
 
-  if (!meetings) {
+  if (meeting) {
+    res.status(200).json(meeting);
+  } else {
     res.status(404);
-    throw new Error("Invalid meeting id");
+    throw new Error("Invalid UID meeting");
   }
 });
 

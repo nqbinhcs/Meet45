@@ -40,11 +40,15 @@ const Join = (props) => {
     let meeting = null;
     try {
       setIsLoading(true);
-      const url = `http://localhost:8080/meetings/${meetingId}/get`;
+      const url = `http://localhost:8000/api/meetings/${meetingId}/get`;
       const response = await axios.get(url);
-      if (response && response.data && response.data.length) {
-        meeting = response.data[0];
-        await joinCometChatGroup({ guid: meeting.meeting_uid });
+
+      console.log(response.data);
+      
+      if (response && response.data) {
+        console.log("TEST GET", response.data);
+        meeting = response.data;
+        await joinCometChatGroup({ guid: meeting.uid });
         goMeeting(meeting);
         setIsLoading(false);
       } else {
@@ -56,7 +60,7 @@ const Join = (props) => {
         goMeeting(meeting);
         setIsLoading(false);
       } else { 
-        alert('Cannot find your meeting');
+        alert('Cannot find your meeting 2');
         setIsLoading(false);
       }
     }

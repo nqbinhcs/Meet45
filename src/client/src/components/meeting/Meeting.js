@@ -18,7 +18,7 @@ const Meeting = () => {
 
   const startDirectCall = () => {
     if (cometChat && meeting) {
-      const sessionID = meeting.meeting_uid;
+      const sessionID = meeting.uid;
       const audioOnly = false;
       const defaultLayout = true;
       const callSettings = new cometChat.CallSettingsBuilder()

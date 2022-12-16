@@ -34,8 +34,8 @@ function Header(props) {
         {
           user && (
             <div className="header__right">
-              <img src={user.user_avatar} alt={user.user_email}/>
-              <span>Hello, {user.user_full_name}</span>
+              <img src={user.avatar} alt={user.email}/>
+              <span>Hello, {user.name}</span>
             </div>
           )
         }

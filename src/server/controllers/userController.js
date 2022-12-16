@@ -7,9 +7,10 @@ const User = require('../models/userModel')
 // @route   POST /api/users
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body
+  const { uid, name, email, password, avatar} = req.body
 
-  if (!name || !email || !password) {
+  if (!uid || !name || !email || !password) {
+    console.log(uid)
     console.log(name)
     console.log(email)
     console.log(password)
@@ -31,9 +32,11 @@ const registerUser = asyncHandler(async (req, res) => {
 
   // Create user
   const user = await User.create({
+    uid,
     name,
     email,
     password: hashedPassword,
+    avatar
   })
 
   // res.status(201).json({'success': 'New user'})
@@ -41,8 +44,10 @@ const registerUser = asyncHandler(async (req, res) => {
   if (user) {
     res.status(201).json({
       _id: user.id,
+      uid: user.uid,
       name: user.name,
       email: user.email,
+      avatar: user.avatar,
       token: generateToken(user._id),
     })
   } else {
@@ -63,8 +68,10 @@ const loginUser = asyncHandler(async (req, res) => {
   if (user && (await bcrypt.compare(password, user.password))) {
     res.json({
       _id: user.id,
+      uid: user.uid,
       name: user.name,
       email: user.email,
+      avatar: user.avatar,
       token: generateToken(user._id),
     })
   } else {
