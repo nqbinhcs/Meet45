@@ -79,7 +79,9 @@ function SignUp(props) {
   };
 
   const signup = async () => {
+
     const { fullname, email, password, confirmPassword } = getInputs();
+
     if (isSignupValid({ fullname, email, password, confirmPassword })) {
       setIsLoading(true);
       const avatar = generateAvatar();

@@ -71,12 +71,11 @@ class CometChatMessages extends React.PureComponent {
 			threadmessageitem: {},
 			threadmessageparent: {},
 			viewOriginalImage: false,
-
-			enableGroupActionMessages: true,
-			enableCallActionMessages: true,
-			enableSendingOneOnOneMessage: true,
-			enableSendingGroupMessage: true,
-			enableHideDeletedMessages: true,
+			enableGroupActionMessages: false,
+			enableCallActionMessages: false,
+			enableSendingOneOnOneMessage: false,
+			enableSendingGroupMessage: false,
+			enableHideDeletedMessages: false,
 		};
 
 		this.contextProviderRef = React.createRef();
@@ -976,7 +975,7 @@ class CometChatMessages extends React.PureComponent {
 		 */
 		if (this.props._parent.trim().length === 0 && this.props.chatWithUser.trim().length === 0 && this.props.chatWithGroup.trim().length === 0) {
 			return (
-				<CometChatContextProvider  ref={el => (this.contextProviderRef = el)} _component={enums.CONSTANTS["MESSAGES_COMPONENT"]} user={this.props.chatWithUser} group={this.props.chatWithGroup}>
+				<CometChatContextProvider ref={el => (this.contextProviderRef = el)} _component={enums.CONSTANTS["MESSAGES_COMPONENT"]} user={this.props.chatWithUser} group={this.props.chatWithGroup}>
 					<div></div>
 				</CometChatContextProvider>
 			);

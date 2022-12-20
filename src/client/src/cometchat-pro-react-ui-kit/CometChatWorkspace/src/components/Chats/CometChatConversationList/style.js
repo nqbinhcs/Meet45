@@ -1,7 +1,7 @@
 export const chatsWrapperStyle = (props, theme) => {
 
     const borderStyle = (props._parent === "") ? {
-        border: `10px solid ${theme.borderColor.primary}`
+        border: `1px solid ${theme.borderColor.primary}`
     } : {};
 
     return {
