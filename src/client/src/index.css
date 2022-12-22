@@ -381,10 +381,13 @@ input {
   grid-template-columns: repeat(2, 1fr);
   height: 3.5rem;
   width: 100%;
+  color: white;
+  background-color: black;
+  opacity: 0.9;
 }
 
 .header__app-name {
-  color: rgb(255, 255, 255);
+  color: aqua;
   font-weight: bold;
 }
 
@@ -412,7 +415,7 @@ input {
 
 .header__right {
   align-items: center;
-  color: #000;
+  color: while;
   display: grid;
   grid-gap: 0.75rem;
   grid-template-columns: max-content max-content max-content;
@@ -422,7 +425,7 @@ input {
 
 .header__logout {
   align-items: center;
-  color: #000;
+  color: white;
   display: grid;
   justify-content: right;
   padding-right: 0.75rem;
@@ -439,14 +442,24 @@ input {
 
 .main {
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #000;
+  opacity: 0.9;
   overflow: auto;
+  color: white;
+  font-size: 20px;
+  font-family: "Inter";
+  background-image: url('https://images2.alphacoders.com/848/84810.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .main__list {
   max-width: 648px;
   margin: 0 auto;
   padding-top: 1rem;
+  color: maroon;
+  font-size: larger;
 }
 
 .main__list-item {
@@ -454,6 +467,7 @@ input {
   padding: 1.5rem 2rem;
   border-radius: 1rem;
   margin: 0.75rem 0;
+  color: black;
 }
 
 .main__meeting-id {
@@ -492,7 +506,7 @@ input {
 
 /* Modal Content/Box */
 .create__content {
-  background-color: #fefefe;
+  background-color: #000000;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   margin: 15% auto; /* 15% from the top and centered */
   margin-top: 10%;
@@ -534,7 +548,7 @@ input {
 }
 
 .create__form input {
-  background-color: #f3f4f6;
+  background-color: #000000;
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
   display: block;
@@ -542,6 +556,7 @@ input {
   margin-bottom: 0.75rem;
   padding: 0.875rem 1rem;
   width: 100%;
+  color: #ffffff;
 }
 
 .create__btn {
@@ -575,7 +590,7 @@ input {
 
 /* Modal Content/Box */
 .join__content {
-  background-color: #fefefe;
+  background-color: #000000;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   margin: 15% auto; /* 15% from the top and centered */
   margin-top: 10%;
@@ -617,7 +632,7 @@ input {
 }
 
 .join__form input {
-  background-color: #f3f4f6;
+  background-color: #000000;
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
   display: block;
@@ -625,6 +640,7 @@ input {
   margin-bottom: 0.75rem;
   padding: 0.875rem 1rem;
   width: 100%;
+  color: white;
 }
 
 .join__btn {
