@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import url("animate.css");
+/* CSS Document */
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #a076bb;
+    --secondary: #7b81cf;
+    --text: white;
+    --layer: #e7cdf8;
+    --font: 'Inter', sans-serif;
+    --margin-top-section: 7%;
+    --margin-top-content: 3%;
+}
+
+/*màu mới
+background: linear-gradient(184.86deg, #16F5DF -11.24%, #E9F9F7 83.27%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;*/
+
+.backtotop {
+    position: fixed;
+    width: 12vh;
+    height: 12vh;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+    color: var(--text);
+    background-color: rgba(123, 129, 207, 0.5);
+    font-size: 40px;
+    text-align: center;
+    z-index: 10;
+}
+
+section { 
+    margin-bottom: 12vh;
+}
+
+/* .cover-menu { 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    padding: 10px 100px; 
+    background: rgba(35,24,32,.6); 
+} */

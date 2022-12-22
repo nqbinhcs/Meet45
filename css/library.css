@@ -1,0 +1,456 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ------------------------------- STYLE CHO TOÀN BÀI ------------------------------- */
+
+/* Reset CSS */
+* { 
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+  	text-decoration: none;
+}
+
+:root {
+    --primary: #16F5DF;
+    --background: #111C45;
+	--navbarcolor: #1E2C5F;
+	--text: #E9F9F7;
+	--texthover: #148F97;
+	--blue: #00B5EC;
+	--semiblue: #6BEAF8;
+	--lightblue: #A1EDF7;
+	--gradient: linear-gradient(169.49deg, #16E3D2 26.4%, #124562 140.88%);
+	--radius: 11px;
+	--font: 'Inter', sans-serif;
+	--animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+/* Định dạng chữ chung cho toàn bài */
+body { 
+	/*margin-left: 2%;*/
+	background: var(--background);
+	/*background-image: var(--gradient);*/
+}
+
+/* Định dạng chữ chung cho các thẻ văn bản */
+em, i, b, a, p, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Inter', sans-serif;
+	color: var(--text);
+	letter-spacing: 0.25px;
+}
+
+em, i, b, a { 
+	font-size: 16px;
+	font-weight: light;
+}
+
+p {
+	font-size: 13px !important;
+	font-weight: 100 !important;
+	line-height: 1.4rem !important;
+	letter-spacing: 0.5px !important;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 24px !important;
+	font-weight: 500;
+}
+
+/*Footer*/
+h4 {
+	font-size: 18px !important;
+	font-weight: 500;
+	color: var(--primary);
+}
+
+h5 {
+	font-size: 14px !important;
+	font-weight: 100;
+}
+
+h6 {
+	font-size: 14px !important;
+	font-weight: 600;
+	color: var(--primary);
+}
+
+/* Phần nội dung chính của web có chiều cao tối thiểu 500px */
+main { 
+	min-height: 500px;
+}
+
+/* Định dạng xuyên suốt cho footer */
+footer {
+	padding: 40px 60px;
+	background-color: var(--navbarcolor);
+}
+
+input, textarea {
+	color: var(--text);
+}
+
+.parentElement {
+	text-align: center;
+}
+
+.btn {
+	font-size: 14px !important;
+    color: var(--text) !important;
+    background-image: linear-gradient(169.49deg, #16E3D2 26.4%, #124562 140.88%) !important;
+	letter-spacing: 0.04rem !important;
+	height: 40px !important;
+	width: 118px !important;
+	border: none !important;
+	border-radius: 11px !important;
+	margin: 0 auto !important;
+    vertical-align: middle !important;
+	text-align: center !important;
+	font-weight: 550 !important;
+}
+
+.btn:hover {
+	background-image: linear-gradient(170.9deg, #16F5DF 55.62%, #00B5EC 118.79%) !important;
+	color: var(--texthover) !important;
+	/*background-image: linear-gradient(210deg, #16F5DF 9.4%, #00B5EC 94.71%);*/
+	/*linear-gradient(170.9deg, #16F5DF 55.62%, #00B5EC 118.79%);*/
+	/*linear-gradient(210deg, #16F5DF 9.4%, #00B5EC 94.71%)*/
+	cursor: pointer !important;
+	transition: all 0.1s !important;
+}
+
+@media (max-width: 800px) {
+	body { 
+		font-size: 3vw;
+	}
+
+	p { 
+		line-height: 5vw;
+	}
+
+	.btn {
+		width: 20vw;
+		height: 2vh;
+		margin-top: 4%;
+		font-size: 3vw;
+		background-color: red;
+	}
+}
+
+/* .bg-xam {
+	background: #eee; width: 100%; height:100%;
+	display: flex;	justify-content: center; align-self: center;  
+	flex-direction: column; text-align: center;
+}
+
+.bg-primary { 
+	background-color: #a077bb; 
+}
+
+.text-primary {
+	color: #a077bb; 
+}
+
+.text-light {
+	color: #fff;
+} */
+
+/* ------------------------------- COLUMN SYSTEM AND RESPONSIVE ------------------------------- */
+
+.container2 { 
+	width: 100%; 
+	margin: auto;
+}
+
+.container-fluid { 
+	width: 100%; 
+	padding: 0 20vw;
+}
+
+@media (max-width: 1200px) {
+	.container-fluid { 
+		width: 100%; 
+		padding: 0 15vw;
+	}
+}
+
+/*1027*/
+.col-semigut {
+	width: 2.083%;
+}
+
+.col-1 {
+	width: 6.11%;
+}
+
+.col-1-semigut {
+	width: 8.194%;
+}
+
+.col-1-gut {
+	width: 10.278%;
+}
+
+.col-2 {
+	width: 14.2361%; 
+}
+
+.col-2-semigut {
+	width: 16.32%;
+}
+
+.col-2-gut {
+	width: 18.40278%;
+}
+
+.col-3 {
+	width: 22.42056% !important;
+}
+
+.col-3-semigut {
+	width: 24.5139%;
+}
+
+.col-3-gut {
+	width: 26.5278%;
+}
+
+.col-4 {
+	width: 30.556%;
+}
+
+.col-4-semigut {
+	width: 32.6389%;
+}
+
+.col-4-gut {
+	width: 34.72%;
+}
+
+.col-5 {
+	width: 38.68056%;
+}
+
+.col-5-semigut {
+	width: 40.7639%;
+}
+
+.col-5-gut {
+	width: 42.9167%;
+}
+
+.col-6 {
+	width: 46.875%;
+}
+
+.col-6-semigut {
+	width: 48.9583%;
+}
+
+.col-6-gut {
+	width: 51.04167%;
+}
+
+.col-7 {
+	width: 55%;
+}
+
+.col-7-semigut {
+	width: 56.25%;
+}
+
+.col-7-gut {
+	width: 59.167%;
+}
+
+.col-8 {
+	width: 63.194%;
+}
+
+.col-8-semigut {
+	width: 65.278%;
+}
+
+.col-8-gut {
+	width: 67.361%;
+}
+
+.col-9 {
+	width: 71.389%;
+}
+
+.col-9-semigut {
+	width: 73.472%;
+}
+
+.col-9-gut {
+	width: 75.56%;
+}
+
+.col-10 {
+	width: 79.51389%;
+}
+
+.col-10-semigut {
+	width: 81.5972%;
+}
+
+.col-10-gut {
+	width: 83.68056%;
+}
+
+.col-11 {
+	width: 87.7083%;
+}
+
+.col-11-semigut {
+	width: 89.79167%;
+}
+
+.col-11-gut {
+	width: 91.875%;
+}
+
+.col-12 {
+	width: 95.83%;
+}
+
+.col-12-semigut {
+	width: 97.9167%;
+}
+
+.col-12-gut {
+	width: 100%;
+}
+
+.row { 
+	display: flex; 
+	flex-wrap: wrap;
+	margin-top: 40px;
+}
+
+/*
+[class*="col-"] { 
+	padding: 15px;
+}
+*/
+
+/*----------------------------------------- style cho ipad----------------------*/
+@media (max-width:800px) {
+	.col-md-1 {width: 8.33%; }
+	.col-md-2 {width: 16.66%; }
+	.col-md-3 {width: 25%; }
+	.col-md-4 {width: 33.33%; }
+	.col-md-5 {width: 41.66%; }
+	.col-md-6 {width: 50%; }
+	.col-md-7 {width: 58.33%; }
+	.col-md-8 {width: 66.66%; }
+	.col-md-9 {width: 75%; }
+	.col-md-10 {width: 83.33%; }
+	.col-md-11 {width: 91.66%; }
+	.col-md-12 {width: 100%; }
+}
+
+@media (max-width:500px) {
+	.col-sm-1 {width: 8.33%; }
+	.col-sm-2 {width: 16.66%; }
+	.col-sm-3 {width: 25%; }
+	.col-sm-4 {width: 33.33%; }
+	.col-sm-5 {width: 41.66%; }
+	.col-sm-6 {width: 50%; }
+	.col-sm-7 {width: 58.33%; }
+	.col-sm-8 {width: 66.66%; }
+	.col-sm-9 {width: 75%; }
+	.col-sm-10 {width: 83.33%; }
+	.col-sm-11 {width: 91.66%; }
+	.col-sm-12 {width: 100%; }
+}
+
+/*----------------------------------------- style cho desstop----------------------*/
+/*
+@media (min-width:1000px) {
+	.col-lg-1 {width: 8.33%; }
+	.col-lg-2 {width: 16.66%; }
+	.col-lg-3 {width: 25%; }
+	.col-lg-4 {width: 33.33%; }
+	.col-lg-5 {width: 41.66%; }
+	.col-lg-6 {width: 50%; }
+	.col-lg-7 {width: 58.33%; }
+	.col-lg-8 {width: 66.66%; }
+	.col-lg-9 {width: 75%; }
+	.col-lg-10 {width: 83.33%; }
+	.col-lg-11 {width: 91.66%; }
+	.col-lg-12 {width: 100%; }
+
+	header .container { display: flex; justify-content: space-between; }
+	header .container nav ul { display: flex; }
+	header .container nav ul li { border: none}
+	.nav-toggle { display: none; }
+	.menu { display: block; }
+}
+*/
+
+.d-flex { 
+	display: flex; 
+	border: 1px solid red; 
+	padding: 20px; 
+}
+
+.justify-center { 
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+
+.align-items-center { 
+	align-items: center;
+}
+
+.img-100 { 
+	width: 100%; 
+	height: auto;
+}
+
+main section { 
+	/* border-top: dotted 2px #666;  */
+	padding: 10px 0;
+}
+
+main section h4, main section h2 { 
+	margin-bottom: 0; 
+}
+
+.p-0 { 
+	padding: 0; 
+}
+
+
+
+#explore p { 
+	margin: 25px 0;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+::placeholder {
+    color: var(--text);
+	font-weight: 100;
+    opacity: 1;
+	letter-spacing: 0.25px;
+}
