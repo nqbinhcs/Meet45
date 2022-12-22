@@ -195,7 +195,6 @@ class CometChatOutgoingCall extends React.PureComponent {
 								<div css={thumbnailStyle()} className="callscreen__thumbnail">{avatar}</div>
 							</div>
 							{errorScreen}
-
 							<div css={headerIconStyle()} className="callscreen__icons">
 								<div css={iconWrapperStyle()} className="icon__block" onClick={this.cancelCall}>
 									<div css={iconStyle(callIcon)} className="icon icon__end"><i></i></div>

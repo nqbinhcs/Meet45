@@ -36,11 +36,6 @@ input {
   width: 100vw;
 }
 
-.header_meeting{
-  background-color: black;
-
-}
-
 .login__logo {
   width: 10.25rem;
   padding-left: 2.125rem;
@@ -376,6 +371,7 @@ input {
 }
 
 .header {
+  background: #fff;
   border-bottom: 1px solid #ccc;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -661,23 +657,42 @@ input {
 }
 
 .meeting {
-  position: relative;
-  width: 100%;
-  bottom: 0;
-
-  /* display: grid; */
-  /* grid-template-columns: 70% 30%; */
-  /* min-height: calc(100vh - 3.5rem); */
+  display: grid;
+  grid-template-columns: 70% 30%;
+  min-height: calc(100vh - 3.5rem);
 }
 
 #call__screen {
-  position: fixed;
+  position: absolute;
   width: 100%;
+  height: 100%;
 
-  background-color: black;
+}
+
+.buttonT {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  z-index: 9999;
+}
+
+.callWrapper{
   bottom: 0;
   left: 0;
+  position: fixed;
   right: 0;
-  top: 50px;
+  top: 3.5rem;
   z-index: 2;
+
+}
+
+.callWrapper1{
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 30%;
+  top: 3.5rem;
+  z-index: 2;
+
 }

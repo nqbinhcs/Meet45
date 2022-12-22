@@ -18,8 +18,7 @@ export const callScreenWrapperStyle = (props, keyframes) => {
         right: "0",
         bottom: "0",
         left: "0",
-        // backgroundColor: `${props.theme.backgroundColor.darkGrey}`,
-        backgroundColor: "black",
+        backgroundColor: `${props.theme.backgroundColor.darkGrey}`,
         zIndex: "999",
         color: `${props.theme.color.white}`,
         textAlign: "center",
@@ -90,11 +89,9 @@ export const callScreenHeaderStyle = (state) => {
     return {
         display: "flex",
         flexDirection: "row",
-        
         alignItems: "center",
         justifyContent: "flex-end",
-        // backgroundColor: "#282c34",
-        backgroundColor: "##e343cd",
+        backgroundColor: "#282c34",
         width: "100%",
         height: "50px",
         position: "absolute",

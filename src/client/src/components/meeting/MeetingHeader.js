@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import Context from '../../context';
-import mainLogo from './iconMeeting.png';
+import mainLogo from './resource/iconMeeting.png';
 
 function MeetingHeader() {
   const { meeting } = useContext(Context);

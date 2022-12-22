@@ -137,7 +137,7 @@ export const iconStyle = (img) => {
         alignItems: "center",
         "i": {
             mask: `url(${img}) center center no-repeat`,
-            backgroundColor: `pink`,
+            backgroundColor: `white`,
             display: "inline-block",
             width: "24px",
             height: "24px",
