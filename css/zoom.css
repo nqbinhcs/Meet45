@@ -60,7 +60,7 @@ a {
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, .s1, .s2, p, label, placeholder {
+h1, h2, h3, h4, h5, h6, .s1, .s2, p, label {
 	color: var(--text);
 }
 
@@ -113,7 +113,7 @@ strong {
 	border-radius: var(--radius_2);
 	text-align: center;
 	transform: translate(0, 0);
-	transition: color 0.4s linear;
+	transition: all 0.5s;
 	position: relative;
 }
 
@@ -150,6 +150,13 @@ strong {
 	letter-spacing: 0.25px;
 }
 
+input[type=text] {
+    font-size: 16px;
+	color: var(--s-dark);
+	font-family: var(--font);
+	letter-spacing: 0.25px;
+}
+
 hr {
 	border-width: 0;
 	color: var(--p-dark);
@@ -160,11 +167,10 @@ hr {
 .form {
 	background-color: var(--p-light);
 	border-radius: var(--radius_1);
-	margin-right: 50px;
-	padding-left: 30px;
-	padding-right: 30px;	
+	margin-right: 7vw;
+	padding: 0px 30px;	
 	padding-top: 1px;
-	padding-bottom: 40px;
+	padding-bottom: 10px;
 	text-align: center;
 }
 
@@ -175,9 +181,10 @@ hr {
 
 .text_placeholder {
 	display: block;
-	width: 100%;
-	padding: 15px;
-	margin: 15px 0;
+	width: 90%;
+	padding: 16px 28px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 	border: 1.5px solid var(--emphasize);
 	border-radius: var(--radius_2);
 	background-color: var(--p-light);
@@ -213,7 +220,7 @@ textarea:focus, input:focus {
 	margin-top: 20px;
 	margin-bottom: 10px;
 	width: 100%;
-	height: 60px;
+	height: 50px;
 }
 
 .btn-large-disabled {
@@ -228,6 +235,7 @@ textarea:focus, input:focus {
 .btn-large-disabled:hover {
 	background-color: var(--s-light);
 	color: var(--text);
+	cursor: not-allowed;
 }
 
 .btn-small {
@@ -254,10 +262,25 @@ textarea:focus, input:focus {
 	text-align: left; 
 	color: var(--error);
 	font-weight: 400;
+	margin-top: -10px;
+	margin-bottom: 30px;
 }
 
 .forgot-password {
 	color: var(--emphasize);
 	font-weight: 500;
 	font-size: 16px;
+}
+
+.title-input {
+	color: var(--p-dark);
+	background-color: var(--p-light); 
+	font-weight: 500; 
+	position: absolute;
+}
+
+.find-pos {
+	margin-top: -82px; 
+	margin-left: 20px; 
+	padding: 0 10px;
 }
