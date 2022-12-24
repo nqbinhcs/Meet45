@@ -35,8 +35,10 @@ const Meeting = () => {
       const sessionID = meeting.uid;
       const audioOnly = false;
       const defaultLayout = true;
+      const showRecordingButton = true;
       const callSettings = new cometChat.CallSettingsBuilder()
         .enableDefaultLayout(defaultLayout)
+        .showRecordingButton(showRecordingButton)
         .setSessionID(sessionID)
         .setIsAudioOnlyCall(audioOnly)
         .build();
@@ -44,21 +46,24 @@ const Meeting = () => {
         callSettings,
         document.getElementById("call__screen"),
         new cometChat.OngoingCallListener({
-          onUserListUpdated: userList => {
+          onUserListUpdated: (userList) => {},
+          onCallEnded: (call) => {
+            history.push("/");
           },
-          onCallEnded: call => {
-            history.push('/');
+          onError: (error) => {
+            history.push("/");
           },
-          onError: error => {
-            history.push('/');
+          onMediaDeviceListUpdated: (deviceList) => {},
+          onUserMuted: (userMuted, userMutedBy) => {},
+          onScreenShareStarted: () => {},
+          onScreenShareStopped: () => {},
+          onRecordingStarted: (recordingStartedBy) => {
+            // This event will work in JS SDK v3.0.2-beta1 & later.
+            console.log("Listener => onRecordingStarted:", recordingStartedBy);
           },
-          onMediaDeviceListUpdated: deviceList => {
-          },
-          onUserMuted: (userMuted, userMutedBy) => {
-          },
-          onScreenShareStarted: () => {
-          },
-          onScreenShareStopped: () => {
+          onRecordingStopped: (recordingStoppedBy) => {
+            // This event will work in JS SDK v3.0.2-beta1 & later.
+            console.log("Listener => onRecordingStopped:", recordingStoppedBy);
           }
         })
       );
