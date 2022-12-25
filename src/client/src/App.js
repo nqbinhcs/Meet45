@@ -7,6 +7,8 @@ import Loading from './components/common/Loading';
 import PrivateRoute from './components/common/PrivateRoute';
 import Context from './context';
 import './index.css';
+import './bootstrap.css';
+import './style.css';
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);

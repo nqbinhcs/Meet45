@@ -5,6 +5,10 @@ import axios from 'axios';
 import withModal from "../common/Modal";
 import SignUp from "../register/SignUp";
 import Context from "../../context";
+import logo from './resource/logo-icon.png';
+import facebook from './resource/facebook.png';
+import google from './resource/google.png';
+import linkedin from './resource/linkedin.png';
 
 const Login = (props) => {
   const { toggleModal } = props;
@@ -68,22 +72,43 @@ const Login = (props) => {
   };
 
   return (
-    <div className="login__container">
-      <div className="login__welcome">
-        <div className="login__logo">
-          <p>Zoom Clone</p>
-        </div>
-        <p>Build Zoom Clone with React & Node</p>
-      </div>
-      <div className="login__form-container">
-        <div className="login__form">
-          <input type="text" placeholder="Email or phone number" ref={emailRef} />
-          <input type="password" placeholder="Password" ref={passwordRef} />
-          <button className="login__submit-btn" onClick={login}>Login</button>
-          <span className="login__forgot-password">Forgot password?</span>
-          <span className="login__signup" onClick={() => toggleModal(true)}>Create New Account</span>
-        </div>
-      </div>
+    <div className="first-screen">
+		  <div className="row align-items-lg-center">
+			  <div className="col-lg-5 block-center">
+				  <a href = "#"><img src = {logo} alt = "logo-icon" className="w-40"/></a>
+			  </div>
+			  <div className="col-lg-7">
+				  <div className="form">
+					  <h4 style = {{margin: '30px 0'}}> Đăng nhập </h4>
+            <input className="position-relative text_placeholder" type="text" placeholder="Nhập tên đăng nhập hoặc email hợp lệ" ref={emailRef}/>
+            <p className="title-input find-pos"> Nhập tên đăng nhập hoặc địa chỉ email </p>
+            <input className="position-relative text_placeholder" type="password" placeholder="******" ref={passwordRef} />
+            <p className="title-input find-pos"> Nhập mật khẩu </p>
+            <a href = "#"><button type = "button" className="btn btn-large mb-20" style = {{marginTop: '0' }} onClick={login}> ĐĂNG NHẬP </button></a>
+            <a href = "#" className="forgot-password" > Quên mật khẩu? </a>
+            
+            <div className="d-flex align-items-lg-center mt-15 justify-content-center">
+						  <hr class= "w-30"/>
+						  <p className="s2" style = {{margin: "15px 50px"}}> HOẶC ĐĂNG NHẬP BẰNG </p>
+						  <hr class= "w-30"/>
+					  </div>
+
+					  <div className="d-flex justify-content-lg-between mt-2 mb-3">
+              <div className="col-lg-3 option-signin">
+                <a href = "https://fb.com"><img src = {facebook} className="w-25 p-2"/> Facebook </a>
+              </div>
+              <div className="col-lg-3 option-signin">
+                <a href = "https://google.com"><img src = {google} className="w-25 p-2"/> Google </a>
+              </div>
+						  <div className="col-lg-3 option-signin">
+							  <a href = "https://linkedin.com"><img src = {linkedin} className="w-25 p-2"/> LinkedIn </a>
+						  </div>
+					  </div>
+
+					  <p style = {{display: "inline-block", marginBottom: "20px", marginTop: "10px"}}> Bạn là thành viên mới? </p> <a onClick={() => toggleModal(true)}><span className="note">Đăng ký ngay</span></a>
+				  </div>
+			  </div>
+		  </div>
     </div>
   );
 }
