@@ -79,12 +79,12 @@ const Login = (props) => {
 			  </div>
 			  <div className="col-lg-7">
 				  <div className="form">
-					  <h4> Đăng nhập </h4>
+					  <h4 style = {{margin: '30px 0'}}> Đăng nhập </h4>
             <input className="position-relative text_placeholder" type="text" placeholder="Nhập tên đăng nhập hoặc email hợp lệ" ref={emailRef}/>
             <p className="title-input find-pos"> Nhập tên đăng nhập hoặc địa chỉ email </p>
             <input className="position-relative text_placeholder" type="password" placeholder="******" ref={passwordRef} />
             <p className="title-input find-pos"> Nhập mật khẩu </p>
-            <a href = "#"><button type = "button" className="btn btn-large mb-20" onClick={login}> ĐĂNG NHẬP </button></a>
+            <a href = "#"><button type = "button" className="btn btn-large mb-20" style = {{marginTop: '0' }} onClick={login}> ĐĂNG NHẬP </button></a>
             <a href = "#" className="forgot-password" > Quên mật khẩu? </a>
             
             <div className="d-flex align-items-lg-center mt-15">
