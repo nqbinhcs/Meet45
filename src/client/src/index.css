@@ -669,12 +669,12 @@ input {
 
 }
 
-.buttonT {
+.showChatButton {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 50px;
-  z-index: 9999;
+  bottom: 15px;
+  right: 115px;
+  width: 32px;
+  z-index: 2;
 }
 
 .callWrapper{

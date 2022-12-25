@@ -13,7 +13,7 @@ const Meeting = () => {
   const [style, setStyle] = useState("callWrapper");
   const [check, setCheck] = useState(0);
   
-  const sayHello = () => {
+  const onShowChatButton = () => {
     if (check == 1){
       setStyle("callWrapper")
       setCheck(0)}
@@ -81,7 +81,7 @@ const Meeting = () => {
         <div className="meeting__left">
         <div className = {style}>
           <div id="call__screen"></div>
-          <button><img src= {chatButton}  className="buttonT" onClick = {sayHello} ></img></button>;
+          <button><img src= {chatButton}  className="showChatButton" onClick = {onShowChatButton} ></img></button>;
         </div>
         </div>
 
