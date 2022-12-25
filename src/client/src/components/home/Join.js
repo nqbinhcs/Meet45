@@ -2,6 +2,7 @@ import { useRef, useContext } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import Context from '../../context';
+import closeButton from './resource/closeButton.png';
 
 const Join = (props) => {
   const { toggleJoin } = props;
@@ -72,7 +73,7 @@ const Join = (props) => {
         <div className="join__container">
           <div className="join__title">Join Meeting</div>
           <div className="join__close">
-            <img alt="close" onClick={hideJoin} src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/__geKiQnSG-.png" />
+            <img alt="close" onClick={hideJoin} src={closeButton} />
           </div>
         </div>
         <div className="join__subtitle"></div>
