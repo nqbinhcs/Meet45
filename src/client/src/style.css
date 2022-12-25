@@ -184,7 +184,7 @@ hr {
 	padding-top: 1px;
 	padding-bottom: 10px;
 	text-align: center;
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 
 .first-screen {
@@ -194,19 +194,19 @@ hr {
 }
 
 .text_placeholder {
-	display: block !important;
-	width: 90% !important;
-	padding: 16px 28px !important;
-	margin-top: 10px !important;
-	margin-bottom: 20px !important;
-	border-radius: var(--radius_2) !important;
-    border: 1.5px solid #111C45 !important;
-	background-color: #66a1ff !important;
+	display: block;
+	width: 100%;
+	padding: 16px 28px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border-radius: var(--radius_2);
+    border: 1.5px solid var(--emphasize);
+	background-color: var(--p-light);
 }
 
 input, select, textarea {
     color: var(--p-dark);
-    background-color: #66a1ff !important;
+    background-color: var(--p-light);
 }
 
 textarea:focus, input:focus {

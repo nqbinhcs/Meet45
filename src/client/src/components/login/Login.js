@@ -87,10 +87,10 @@ const Login = (props) => {
             <a href = "#"><button type = "button" className="btn btn-large mb-20" style = {{marginTop: '0' }} onClick={login}> ĐĂNG NHẬP </button></a>
             <a href = "#" className="forgot-password" > Quên mật khẩu? </a>
             
-            <div className="d-flex align-items-lg-center mt-15">
-						  <hr class= "w-25"/>
-						  <p className="s2"> HOẶC ĐĂNG NHẬP BẰNG </p>
-						  <hr class= "w-25"/>
+            <div className="d-flex align-items-lg-center mt-15 justify-content-center">
+						  <hr class= "w-30"/>
+						  <p className="s2" style = {{margin: "15px 50px"}}> HOẶC ĐĂNG NHẬP BẰNG </p>
+						  <hr class= "w-30"/>
 					  </div>
 
 					  <div className="d-flex justify-content-lg-between mt-2 mb-3">
@@ -105,7 +105,7 @@ const Login = (props) => {
 						  </div>
 					  </div>
 
-					  <p style = {{display: "inline-block"}}> Bạn là thành viên mới? </p> <a onClick={() => toggleModal(true)}><span className="note">Đăng ký ngay</span></a>
+					  <p style = {{display: "inline-block", marginBottom: "20px", marginTop: "10px"}}> Bạn là thành viên mới? </p> <a onClick={() => toggleModal(true)}><span className="note">Đăng ký ngay</span></a>
 				  </div>
 			  </div>
 		  </div>
