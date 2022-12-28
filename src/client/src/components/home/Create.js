@@ -2,6 +2,7 @@ import { useRef, useContext } from 'react';
 import { v4 as uuidv4 } from "uuid";
 import axios from 'axios';
 import Context from '../../context';
+import closeButton from './resource/closeButton.png';
 
 const Create = (props) => {
   const { toggleCreate } = props;
@@ -49,7 +50,7 @@ const Create = (props) => {
         <div className="create__container">
           <div className="create__title">Create Meeting</div>
           <div className="create__close">
-            <img alt="close" onClick={hideCreate} src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/__geKiQnSG-.png" />
+            <img alt="close" onClick={hideCreate} src={closeButton}/>
           </div>
         </div>
         <div className="create__subtitle"></div>

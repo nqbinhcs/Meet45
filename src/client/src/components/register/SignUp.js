@@ -147,6 +147,54 @@ function SignUp(props) {
       </div>
     </div>
   );
+
+  // return (
+  //   <div id="first-screen">
+  //     <div className="container signup">
+  //       <p> Ta là Iphone 13! </p>
+  //       <div className="row align-items-lg-center">
+  //         <div className="col-lg-5" style = "display: block; text-align: center; ">
+  //           <a href = "#"><img src = "images/logo-icon.png" alt = "logo-icon" className="w-40"/></a>
+  //         </div>
+  //         <div className="col-lg-7">
+  //           <div className="form">
+  //             <h4> Đăng ký </h4>
+  //             <input className="position-relative text_placeholder" type = "text" placeholder = "Tên đăng nhập có ít nhất 6 ký tự"  ref={fullnameRef}/>
+  //             <p className="title-input find-pos"> Nhập tên đăng nhập </p>
+  //             <input className="text_placeholder" type = "text" placeholder = "Vui lòng nhập đại chỉ email hợp lệ" ref={emailRef}/>
+  //             <p className="title-input find-pos"> Nhập địa chỉ email </p>
+  //             <input className="text_placeholder" type = "text" placeholder = "Mật khẩu có ít nhất 6 ký tự, có đủ chữ hoa, chữ thường và ký tự đặc biệt" ref={passwordRef}/>
+  //             <p className="title-input find-pos"> Nhập mật khẩu </p>
+
+  //             <label for = "cb1">
+  //               <input type = "checkbox" style={{float: 'left'}} id = "cb1"/> Tôi đồng ý với điều khoản dịch vụ và chính sách bảo mật của Meet45
+  //             </label>
+
+  //             <a href = "signin-error1.html"><button type = "button" className="btn btn-large" onClick={signup}> TIẾP TỤC </button></a>
+  //             <div className="d-flex align-items-lg-center">
+  //               <hr className="w-25"/>
+  //               <p className="s2"> HOẶC ĐĂNG NHẬP BẰNG </p>
+  //               <hr className="w-25"/>
+  //             </div>
+              
+  //             <div className="d-flex justify-content-lg-between mt-2 mb-3">
+  //               <div className="col-lg-3 option-signin">
+  //                 <a href = "https://fb.com"><img src = "images/facebook.png" alt="fb" className="w-20 p-2"/> Facebook </a>
+  //               </div>
+  //               <div className="col-lg-3 option-signin">
+  //                 <a href = "https://google.com"><img src = "images/google.png" alt="gg" className="w-20 p-2"/> Google </a>
+  //               </div>
+  //               <div className="col-lg-3 option-signin">
+  //                 <a href = "https://linkedin.com"><img src = "images/linkedin.png" alt="lk" className="w-20 p-2"/> LinkedIn </a>
+  //               </div>
+  //             </div>
+  //             <p style = "display: inline-block; "> Bạn đã có tài khoản <span style = "font-weight: 600; ">Meet45</span>?</p> <a><span style = "font-weight: 700; color: var(--emphasize); cursor: pointer; ">Đăng nhập </span></a>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default SignUp;
