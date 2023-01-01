@@ -226,26 +226,14 @@
   }
 }
 
-/* The Modal (background) */
-.signup {
-  background-color: rgba(255, 255, 255, 0.8);
-  display: block; /* Hidden by default */
-  height: 100%; /* Full height */
-  left: 0;
-  /* overflow: auto; */
-  position: fixed; /* Stay in place */
-  top: 0;
-  width: 100%; /* Full width */
-  z-index: 1; /* Sit on top */
-}
-
 /* Modal Content/Box */
 .signup__content {
-  background-color: #fefefe;
+  background-color: var(--p-light);
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   margin: 15% auto; /* 15% from the top and centered */
   margin-top: 10%;
-  width: 27rem; /* Could be more or less, depending on screen size */
+  width: 50rem; /* Could be more or less, depending on screen size */
+  border-radius: var(--radius_1);
 }
 
 .signup__container {

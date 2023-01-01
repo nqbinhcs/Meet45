@@ -3,6 +3,11 @@ import validator from "validator";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import Context from "../../context";
+import logo from './resource/logo-icon.png';
+import facebook from './resource/facebook.png';
+import google from './resource/google.png';
+import linkedin from './resource/linkedin.png';
+import close from './resource/close.png';
 
 function SignUp(props) {
   const { toggleModal } = props;
@@ -121,12 +126,12 @@ function SignUp(props) {
     <div className="signup">
       <div className="signup__content">
         <div className="signup__container">
-          <div className="signup__title">Sign Up</div>
+          <div className="signup__title"> Đăng ký </div>
           <div className="signup__close">
             <img
               alt="close"
               onClick={() => toggleModal(false)}
-              src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/__geKiQnSG-.png"
+              src={close} class = "w-10"
             />
           </div>
         </div>
@@ -140,61 +145,58 @@ function SignUp(props) {
             placeholder="Confirm Password"
             ref={confirmPasswordRef}
           />
-          <button className="signup__btn" onClick={signup}>
-            Sign Up
+          <button className="btn btn-large mb-20" onClick={signup}>
+            Đăng ký
           </button>
         </div>
       </div>
     </div>
   );
 
-  // return (
-  //   <div id="first-screen">
-  //     <div className="container signup">
-  //       <p> Ta là Iphone 13! </p>
-  //       <div className="row align-items-lg-center">
-  //         <div className="col-lg-5" style = "display: block; text-align: center; ">
-  //           <a href = "#"><img src = "images/logo-icon.png" alt = "logo-icon" className="w-40"/></a>
-  //         </div>
-  //         <div className="col-lg-7">
-  //           <div className="form">
-  //             <h4> Đăng ký </h4>
-  //             <input className="position-relative text_placeholder" type = "text" placeholder = "Tên đăng nhập có ít nhất 6 ký tự"  ref={fullnameRef}/>
-  //             <p className="title-input find-pos"> Nhập tên đăng nhập </p>
-  //             <input className="text_placeholder" type = "text" placeholder = "Vui lòng nhập đại chỉ email hợp lệ" ref={emailRef}/>
-  //             <p className="title-input find-pos"> Nhập địa chỉ email </p>
-  //             <input className="text_placeholder" type = "text" placeholder = "Mật khẩu có ít nhất 6 ký tự, có đủ chữ hoa, chữ thường và ký tự đặc biệt" ref={passwordRef}/>
-  //             <p className="title-input find-pos"> Nhập mật khẩu </p>
+  return (
+    <div className="first-screen">
+		  <div className="row align-items-lg-center">
+			  <div className="col-lg-5 block-center">
+				  <a href = "#"><img src = {logo} alt = "logo-icon" className="w-40"/></a>
+			  </div>
+			  <div className="col-lg-7">
+				  <div className="form">
+					  <h4 style = {{margin: '30px 0'}}> Đăng nhập </h4>
+            <input className="position-relative text_placeholder" type="text" placeholder="Nhập họ và tên hợp lệ" ref={fullnameRef}/>
+            <p className="title-input find-pos"> Nhập họ và tên </p>
+            <input className="position-relative text_placeholder" type="text" placeholder="Nhập địa chỉ email hợp lệ" ref={emailRef}/>
+            <p className="title-input find-pos"> Nhập địa chỉ email </p>
+            <input className="position-relative text_placeholder" type="password" placeholder="******" ref={passwordRef} />
+            <p className="title-input find-pos"> Nhập mật khẩu </p>
+            <input className="position-relative text_placeholder" type="password" placeholder="******" ref={confirmPasswordRef} />
+            <p className="title-input find-pos"> Nhập lại mật khẩu </p>
+            <a href = "#"><button type = "button" className="btn btn-large mb-20" style = {{marginTop: '0' }} onClick={signup}> TIẾP TỤC </button></a>
+            <a href = "#" className="forgot-password" > Quên mật khẩu? </a>
+            
+            <div className="d-flex align-items-lg-center mt-15 justify-content-center">
+						  <hr class= "w-30"/>
+						  <p className="s2" style = {{margin: "15px 50px"}}> HOẶC ĐĂNG NHẬP BẰNG </p>
+						  <hr class= "w-30"/>
+					  </div>
 
-  //             <label for = "cb1">
-  //               <input type = "checkbox" style={{float: 'left'}} id = "cb1"/> Tôi đồng ý với điều khoản dịch vụ và chính sách bảo mật của Meet45
-  //             </label>
+					  <div className="d-flex justify-content-lg-between mt-2 mb-3">
+              <div className="col-lg-3 option-signin">
+                <a href = "https://fb.com"><img src = {facebook} className="w-25 p-2"/> Facebook </a>
+              </div>
+              <div className="col-lg-3 option-signin">
+                <a href = "https://google.com"><img src = {google} className="w-25 p-2"/> Google </a>
+              </div>
+						  <div className="col-lg-3 option-signin">
+							  <a href = "https://linkedin.com"><img src = {linkedin} className="w-25 p-2"/> LinkedIn </a>
+						  </div>
+					  </div>
 
-  //             <a href = "signin-error1.html"><button type = "button" className="btn btn-large" onClick={signup}> TIẾP TỤC </button></a>
-  //             <div className="d-flex align-items-lg-center">
-  //               <hr className="w-25"/>
-  //               <p className="s2"> HOẶC ĐĂNG NHẬP BẰNG </p>
-  //               <hr className="w-25"/>
-  //             </div>
-              
-  //             <div className="d-flex justify-content-lg-between mt-2 mb-3">
-  //               <div className="col-lg-3 option-signin">
-  //                 <a href = "https://fb.com"><img src = "images/facebook.png" alt="fb" className="w-20 p-2"/> Facebook </a>
-  //               </div>
-  //               <div className="col-lg-3 option-signin">
-  //                 <a href = "https://google.com"><img src = "images/google.png" alt="gg" className="w-20 p-2"/> Google </a>
-  //               </div>
-  //               <div className="col-lg-3 option-signin">
-  //                 <a href = "https://linkedin.com"><img src = "images/linkedin.png" alt="lk" className="w-20 p-2"/> LinkedIn </a>
-  //               </div>
-  //             </div>
-  //             <p style = "display: inline-block; "> Bạn đã có tài khoản <span style = "font-weight: 600; ">Meet45</span>?</p> <a><span style = "font-weight: 700; color: var(--emphasize); cursor: pointer; ">Đăng nhập </span></a>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
+					  <p style = {{display: "inline-block", marginBottom: "20px", marginTop: "10px"}}> Bạn là thành viên mới? </p> <a onClick={() => toggleModal(true)}><span className="note">Đăng ký ngay</span></a>
+				  </div>
+			  </div>
+		  </div>
+    </div>
+  );
 }
 
 export default SignUp;

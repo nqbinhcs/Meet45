@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import SignUp from './components/register/SignUp';
 import Login from './components/login/Login';
 import Home from './components/home/Home';
 import Meeting from './components/meeting/Meeting';
