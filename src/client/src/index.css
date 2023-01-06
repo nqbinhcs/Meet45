@@ -231,7 +231,7 @@
   background-color: var(--p-light);
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   margin: 15% auto; /* 15% from the top and centered */
-  margin-top: 10%;
+  margin-top: 5%;
   width: 50rem; /* Could be more or less, depending on screen size */
   border-radius: var(--radius_1);
 }
@@ -251,7 +251,8 @@
   align-items: center;
   display: grid;
   justify-items: right;
-  padding: 1.25rem 1.25rem 0.5rem 0;
+  padding: 2rem 1.25rem 0.5rem 0;
+  margin-top: 100px;
 }
 
 .signup__close img:hover {
@@ -267,7 +268,7 @@
 
 .signup__form {
   width: 100%;
-  padding: 1.25rem;
+  padding: 1rem 3rem;
 }
 
 /* .signup__form input {
