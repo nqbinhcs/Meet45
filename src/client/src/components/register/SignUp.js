@@ -125,29 +125,29 @@ function SignUp(props) {
   return (
     <div className="signup">
       <div className="signup__content">
-        <div className="signup__container">
-          <div className="signup__title"> Đăng ký </div>
+        <div classs = "align-items-center">
           <div className="signup__close">
             <img
               alt="close"
               onClick={() => toggleModal(false)}
-              src={close} class = "w-10"
+              src={close} class = "w-5"
             />
           </div>
+          <h4 style = {{marginTop: '-50px'}} className="block-center"> Đăng ký </h4>
         </div>
-        <div className="signup__subtitle"></div>
         <div className="signup__form">
-          <input type="text" placeholder="Fulllname" ref={fullnameRef} />
-          <input type="text" placeholder="Email" ref={emailRef} />
-          <input type="password" placeholder="Password" ref={passwordRef} />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            ref={confirmPasswordRef}
-          />
-          <button className="btn btn-large mb-20" onClick={signup}>
-            Đăng ký
-          </button>
+          <input className="position-relative text_placeholder" type="text" placeholder="Họ và tên" ref={fullnameRef} />
+          <p className="title-input find-pos"> Nhập họ và tên </p>
+          <input className="position-relative text_placeholder" type="text" placeholder="Email" ref={emailRef} />
+          <p className="title-input find-pos"> Nhập địa chỉ email hợp lệ </p>
+          <input className="position-relative text_placeholder" type="password" placeholder="******" ref={passwordRef} />
+          <p className="title-input find-pos"> Nhập mật khẩu </p>
+          <input className="position-relative text_placeholder" type="password" placeholder="******" ref={confirmPasswordRef}/>
+          <p className="title-input find-pos"> Nhập lại mật khẩu </p>
+          <label for = "cb1">
+						<input type = "checkbox" style = {{float: 'left', marginTop: '3px', marginRight: '5px'}} id = "cb1"/> Tôi đồng ý với điều khoản dịch vụ và chính sách bảo mật của Meet45
+					</label>
+          <button className="btn btn-large mb-20 mt-10" onClick={signup}> Đăng ký </button>
         </div>
       </div>
     </div>
@@ -156,6 +156,13 @@ function SignUp(props) {
   return (
     <div className="first-screen">
 		  <div className="row align-items-lg-center">
+      <div className="signup__close">
+          <img
+            alt="close"
+            onClick={() => toggleModal(false)}
+            src={close} class = "w-5"
+          />
+        </div>
 			  <div className="col-lg-5 block-center">
 				  <a href = "#"><img src = {logo} alt = "logo-icon" className="w-40"/></a>
 			  </div>
