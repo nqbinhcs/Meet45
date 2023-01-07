@@ -30,10 +30,10 @@ To clone and run demo of this application, you'll need [Git](https://git-scm.com
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/nqbinhcs/CSC13002-Introduction-to-Software-Engineering.git
+$ git clone https://github.com/nqbinhcs/Meet45.git
 
 # Go into the repository
-$ cd CSC13002-Introduction-to-Software-Engineering/src
+$ cd Meet45/src
 
 ```
 
