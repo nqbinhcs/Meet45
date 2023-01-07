@@ -2,3 +2,4 @@
 - [Template1-PhanTich-2019](https://docs.google.com/document/d/1k-NXq2NEEfQt2OPZFIC8Lyv694gFW7SWHlqnB1ZXKOc/edit?usp=sharing)
 - [Slide Microservice](https://studenthcmusedu-my.sharepoint.com/:p:/g/personal/20120412_student_hcmus_edu_vn/EYG9blcNNGVEiZbhGKW2XKYBacnwEJaL2sevn02s6m1CBg?rtime=GLtqy_bC2kg)
 - [Template2](https://docs.google.com/document/d/1Ss54L3Xo7s81JBy1DhA_Geo_xTw4QUUFSJRPtqUTrhY/edit?usp=sharing)
+- [Template3](https://docs.google.com/document/d/1mVhBDAaK9zLJBxVq-MxWBUjrAHgrP7Fd/edit?usp=sharing&ouid=105335594410199482731&rtpof=true&sd=true)
