@@ -79,17 +79,17 @@ const Login = (props) => {
 			  </div>
 			  <div className="col-lg-7">
 				  <div className="form">
-					  <h4 style = {{margin: '30px 0'}}> Đăng nhập </h4>
-            <input className="position-relative text_placeholder" type="text" placeholder="Nhập email hợp lệ" ref={emailRef}/>
-            <p className="title-input find-pos"> Nhập địa chỉ email </p>
+					  <h4 style = {{margin: '30px 0'}}> Log in </h4>
+            <input className="position-relative text_placeholder" type="text" placeholder="abc@gmail.com" ref={emailRef}/>
+            <p className="title-input find-pos"> Email </p>
             <input className="position-relative text_placeholder" type="password" placeholder="******" ref={passwordRef} />
-            <p className="title-input find-pos"> Nhập mật khẩu </p>
-            <a href = "#"><button type = "button" className="btn btn-large mb-20" style = {{marginTop: '0' }} onClick={login}> ĐĂNG NHẬP </button></a>
-            <a href = "#" className="forgot-password" > Quên mật khẩu? </a>
+            <p className="title-input find-pos"> Password </p>
+            <a href = "#"><button type = "button" className="btn btn-large mb-20" style = {{marginTop: '0' }} onClick={login}> LOG IN </button></a>
+            <a href = "#" className="forgot-password" > Forget password? </a>
             
             <div className="d-flex align-items-lg-center mt-15 justify-content-center">
 						  <hr class= "w-30"/>
-						  <p className="s2" style = {{margin: "15px 50px"}}> HOẶC ĐĂNG NHẬP BẰNG </p>
+						  <p className="s2" style = {{margin: "15px 50px"}}> OR YOU CAN LOG IN WITH </p>
 						  <hr class= "w-30"/>
 					  </div>
 
@@ -105,7 +105,7 @@ const Login = (props) => {
 						  </div>
 					  </div>
 
-					  <p style = {{display: "inline-block", marginBottom: "20px", marginTop: "10px"}}> Bạn là thành viên mới? </p> <a onClick={() => toggleModal(true)}><span className="note">Đăng ký ngay</span></a>
+					  <p style = {{display: "inline-block", marginBottom: "20px", marginTop: "10px"}}> Are you a new <strong>Meet45</strong> member? </p> <a onClick={() => toggleModal(true)}><span className="note">Sign up now</span></a>
 				  </div>
 			  </div>
 		  </div>

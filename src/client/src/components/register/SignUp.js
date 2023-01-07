@@ -129,21 +129,21 @@ function SignUp(props) {
               src={close} class = "w-5"
             />
           </div>
-          <h4 style = {{marginTop: '-50px'}} className="block-center"> Đăng ký </h4>
+          <h4 style = {{marginTop: '-50px'}} className="block-center"> Sign up </h4>
         </div>
         <div className="signup__form">
-          <input className="position-relative text_placeholder" type="text" placeholder="Họ và tên" ref={fullnameRef} />
-          <p className="title-input find-pos"> Nhập họ và tên </p>
-          <input className="position-relative text_placeholder" type="text" placeholder="Email" ref={emailRef} />
-          <p className="title-input find-pos"> Nhập địa chỉ email hợp lệ </p>
+          <input className="position-relative text_placeholder" type="text" placeholder="Kaito Kid" ref={fullnameRef} />
+          <p className="title-input find-pos"> Full name </p>
+          <input className="position-relative text_placeholder" type="text" placeholder="abc@gmail.com" ref={emailRef} />
+          <p className="title-input find-pos"> Email </p>
           <input className="position-relative text_placeholder" type="password" placeholder="******" ref={passwordRef} />
-          <p className="title-input find-pos"> Nhập mật khẩu </p>
+          <p className="title-input find-pos"> Password </p>
           <input className="position-relative text_placeholder" type="password" placeholder="******" ref={confirmPasswordRef}/>
-          <p className="title-input find-pos"> Nhập lại mật khẩu </p>
+          <p className="title-input find-pos"> Confirm password </p>
           <label for = "cb1">
-						<input type = "checkbox" style = {{float: 'left', marginTop: '3px', marginRight: '5px'}} id = "cb1"/> Tôi đồng ý với điều khoản dịch vụ và chính sách bảo mật của Meet45
+						<input type = "checkbox" style = {{float: 'left', marginTop: '3px', marginRight: '5px'}} id = "cb1"/> I agree to <strong>Meet45's terms of service and privacy policy</strong>
 					</label>
-          <button className="btn btn-large mb-20 mt-10" onClick={signup}> Đăng ký </button>
+          <button className="btn btn-large mb-20 mt-10" onClick={signup}> Sign up </button>
         </div>
       </div>
     </div>
