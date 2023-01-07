@@ -37,6 +37,10 @@ $ cd CSC13002-Introduction-to-Software-Engineering/src
 
 # Run demo the app
 $ docker-compose up
+# It will produce
+#   - Client sites: http://localhost:3001/ & http://localhost:3002/
+#   - Server sites: http://localhost:8000/
+
 
 ```
 
