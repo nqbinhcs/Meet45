@@ -35,13 +35,29 @@ $ git clone https://github.com/nqbinhcs/CSC13002-Introduction-to-Software-Engine
 # Go into the repository
 $ cd CSC13002-Introduction-to-Software-Engineering/src
 
-# Run demo the app
-$ docker-compose up
+```
+
+In the `client` directory, create `.env`file as format below:
+```
+REACT_APP_COMETCHAT_APP_ID=<YOUR APP ID>
+REACT_APP_COMETCHAT_REGION=<YOUR REGION>
+REACT_APP_COMETCHAT_AUTH_KEY=<YOUR AUTHENCIATION KEY>
+```
+
+In the `server` directory, create `.env`file as format below:
+```
+PORT=<YOUR OPTIONAL PORT>
+MONGO_REMOTE_URL=<YOUR MONGO URI DATABASE>
+JWT_SECRET=<SECRET KEY>
+```
+
+
+Run demo the app
+```bash
 # It will produce
 #   - Client sites: http://localhost:3001/ & http://localhost:3002/
 #   - Server sites: http://localhost:8000/
-
-
+$ docker-compose up
 ```
 
 
