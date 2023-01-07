@@ -3,10 +3,6 @@ import validator from "validator";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import Context from "../../context";
-import logo from './resource/logo-icon.png';
-import facebook from './resource/facebook.png';
-import google from './resource/google.png';
-import linkedin from './resource/linkedin.png';
 import close from './resource/close.png';
 
 function SignUp(props) {

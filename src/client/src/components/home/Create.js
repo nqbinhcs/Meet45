@@ -55,7 +55,7 @@ const Create = (props) => {
         </div>
         <div className="create__subtitle"></div>
         <div className="create__form">
-          <input type="text" placeholder="Meeting Name" ref={meetingNameRef} />
+          <input type="text" placeholder="Meeting Name" style = {{color: 'white'}} ref={meetingNameRef} />
           <button className="create__btn" onClick={createMeeting}>
             Create
           </button>

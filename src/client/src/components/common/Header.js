@@ -30,7 +30,7 @@ function Header(props) {
   return (
     <div className="header">
       <div className="header__left">
-        <span className="header__app-name">Zoom Clone</span>
+        <span className="header__app-name gradient-text">Meet45</span>
         {
           user && (
             <div className="header__right">

@@ -19,6 +19,7 @@ html {
 	--error: #CC525F;
 	--placeholder: #E0ECFF;
     --bg: #0b0d0f;
+	--gradient: linear-gradient(169.49deg, #16E3D2 26.4%, #124562 140.88%);
     --font: 'Inter', sans-serif;
     --margin-top-section: 7%;
     --margin-top-content: 3%;
@@ -331,4 +332,20 @@ textarea:focus, input:focus {
 	top: 0;
 	width: 100%; 
 	z-index: 1;
+}
+
+.gradient-text {
+	/*transition: width 2s;
+	transition-timing-function: ease-out;*/
+	transition: all 500ms ease;
+	-webkit-transition: all 500ms ease;
+    transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+	
+  	background: linear-gradient(90deg, rgba(204,82,95,1) 0%, rgba(102,161,255,1) 50%, rgba(71,204,246,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }

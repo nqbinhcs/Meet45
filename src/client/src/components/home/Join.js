@@ -78,7 +78,7 @@ const Join = (props) => {
         </div>
         <div className="join__subtitle"></div>
         <div className="join__form">
-          <input type="text" placeholder="Meeting Id" ref={meetingIdRef} />
+          <input type="text" placeholder="Meeting Id" style = {{color: 'white'}} ref={meetingIdRef} />
           <button className="join__btn" onClick={joinMeeting}>
             Join
           </button>
