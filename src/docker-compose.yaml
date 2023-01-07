@@ -8,14 +8,24 @@ services:
       - ./server:/app
       - /app/node_modules
 
-  frontend:
+  frontend-user-1:
     build: ./client
     ports:
-      - "3000:3000"
+      - "3001:3000"
     volumes:
       - ./client:/app
     stdin_open: true
     tty: true
     depends_on:
       - server
+
+  frontend-user-2:
+    build: ./client
+    ports:
+      - "3002:3000"
+    volumes:
+      - ./client:/app
+    stdin_open: true
+    tty: true
+    
 
