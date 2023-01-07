@@ -1,23 +1,54 @@
-# CNTN20 - Group 09
+<h1 align="center">
+  <br>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="src\client\public\logo192.png" alt="Meet45" width="150"></a>
+  <br>
+  Meet45
+  <br>
+</h1>
 
-## Folder structure
-- `src`: Source code web app
-- `docs`: Software development document
+<h4 align="center">A light weight video conference app using ComeChat API</a>.</h4>
 
-## Reference
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#run-demo">Run demo</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
 
-### Usecase & diagram
-- http://repository.sustech.edu/bitstream/handle/123456789/21304/VIDEO%20CONFERENCE%20SYSTEMUSING%20WEBRTC.pdf?sequence=1
+![screenshot](images/demo.gif)
+
+## Key Features
+* User authentication: Allow users to log in with their email and password to access their account
+* Host and join video conferences
+* Share your screen in real-time
+* Send messages with others during the call
 
 
-### Figma
-- https://www.figma.com/file/rbVYGlbqasa9tLXoWSubJn/Koch%C3%A9?node-id=53%3A2
+## Run demo
 
-### Document
-- [CNTN19](https://github.com/duytienkh/se-project)
-- https://www.mindbowser.com/guide-to-build-a-video-conferencing-app-like-zoom/
+To clone and run demo of this application, you'll need [Git](https://git-scm.com) and [Docker](https://www.docker.com/) installed on your computer. From your command line:
 
-### Code
-- https://www.cometchat.com/tutorials/zoom-clone-app
-- https://www.youtube.com/watch?v=ZVznzY7EjuY
-- https://github.com/CleverProgrammers/nodejs-zoom-clone
+```bash
+# Clone this repository
+$ git clone https://github.com/nqbinhcs/CSC13002-Introduction-to-Software-Engineering.git
+
+# Go into the repository
+$ cd CSC13002-Introduction-to-Software-Engineering/src
+
+# Run demo the app
+$ docker-compose up
+
+```
+
+
+## Credits
+This software uses the following:
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/)
+- [Comechat tutorial](https://www.cometchat.com/tutorials/zoom-clone-app)
+
+
+## License
+MIT
+
+
