@@ -37,16 +37,16 @@ $ cd Meet45/src
 
 ```
 
-In the `client` directory, create `.env`file as format below:
+In the `client` directory, create `.env` file as format below:
 ```
 REACT_APP_COMETCHAT_APP_ID=<YOUR APP ID>
 REACT_APP_COMETCHAT_REGION=<YOUR REGION>
 REACT_APP_COMETCHAT_AUTH_KEY=<YOUR AUTHENCIATION KEY>
 ```
 
-In the `server` directory, create `.env`file as format below:
+In the `server` directory, create `.env` file as format below:
 ```
-PORT=<YOUR OPTIONAL PORT>
+PORT=8000
 MONGO_REMOTE_URL=<YOUR MONGO URI DATABASE>
 JWT_SECRET=<SECRET KEY>
 ```
